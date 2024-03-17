@@ -1,0 +1,30 @@
+.menu,
+.list {
+	display: flex;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva,
+		Verdana, sans-serif;
+}
+.menu {
+	margin-top: 60px;
+	justify-content: center;
+	height: 30px;
+	gap: 100px;
+}
+.list {
+	padding-left: 390px;
+	width: 800px;
+	justify-content: space-between;
+}
+.phone {
+	position: relative;
+	left: 30px;
+}
+.create-At {
+	padding-left: 50px;
+}
+.favorite {
+	padding-right: 60px;
+}
+.note {
+	padding-right: 58px;
+}

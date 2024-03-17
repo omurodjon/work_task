@@ -1,0 +1,76 @@
+.grid {
+	display: grid;
+	width: 50vw;
+	justify-content: center;
+	gap: 20px;
+	grid-template-columns: repeat(3, 340px);
+	grid-template-rows: 170px;
+	padding: 100px 0 0 380px;
+}
+.user {
+	display: flex;
+	justify-content: center;
+	padding-left: 5px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	border: 1px solid #77ff00;
+	width: 340px;
+	height: 170px;
+	flex-wrap: wrap;
+	gap: 10px;
+	flex-direction: column;
+	border-radius: 12px;
+	background-color: #77ff00;
+	color: #fff;
+}
+.btns {
+	display: flex;
+	flex-direction: column;
+	padding-right: 5px;
+	gap: 10px;
+}
+.search {
+	position: absolute;
+	right: 160px;
+	height: 30px;
+	top: 50px;
+	border-radius: 10px;
+	padding-left: 8px;
+	cursor: text;
+}
+.edit {
+	width: 90px;
+	height: 30px;
+	border-radius: 10px;
+	background-color: rgb(237, 175, 18);
+	color: #fff;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	border-color: #ffcc00;
+	cursor: pointer;
+}
+.delete {
+	cursor: pointer;
+	width: 90px;
+	height: 30px;
+	border-radius: 10px;
+	background-color: rgb(211, 48, 48);
+	color: #fff;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	border-color: #ff0000;
+}
+.add-contact {
+	position: absolute;
+	right: 20px;
+	top: 51px;
+	width: 120px;
+	height: 30px;
+	border-radius: 10px;
+	background: #007bff;
+	color: #fff;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	border-color: #fff;
+	cursor: pointer;
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
