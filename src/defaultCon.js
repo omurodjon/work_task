@@ -4,7 +4,7 @@ export const defaultContacts = [
 		name: 'John',
 		phoneNumber: '+998933458778',
 		createAt: '3.17.2024',
-		isFavorites: 'Yes',
+		isFavorites: 'true',
 		note: 'friend',
 	},
 	{
@@ -12,7 +12,7 @@ export const defaultContacts = [
 		name: 'Mary',
 		phoneNumber: '+998907654425',
 		createAt: '3.11.2024',
-		isFavorites: 'No',
+		isFavorites: 'false',
 		note: 'girlfriend',
 	},
 	{
@@ -20,7 +20,7 @@ export const defaultContacts = [
 		name: 'Jane',
 		phoneNumber: '+998917345775',
 		createAt: '3.07.2024',
-		isFavorites: 'Yes',
+		isFavorites: 'true',
 		note: 'girlfriend',
 	},
 	{
@@ -28,7 +28,7 @@ export const defaultContacts = [
 		name: 'Mark',
 		phoneNumber: '+998908888587',
 		createAt: '3.10.2024',
-		isFavorites: 'No',
+		isFavorites: 'false',
 		note: 'friend',
 	},
 ];

@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import 'react-toastify/dist/ReactToastify.css';
 
 function CreateContact() {
 	const [name, setName] = useState('');
 	const [phoneNumber, setPhoneNumber] = useState('');
-	const [isFavorite, setIsFavorite] = useState('');
+	const [isFavorite, setIsFavorite] = useState(false);
 	const [note, setNote] = useState('');
 	const [createdAt, setCreatedAt] = useState('');
+
 
 	const generateRandomNumber = () => {
 		return Math.floor(Math.random() * 100); // Generates a random number between 0 and 99
@@ -24,6 +25,7 @@ function CreateContact() {
 			isFavorite: isFavorite,
 			note: note,
 		};
+
 		console.log('New Contact:', newContact);
 		const existingUsers = JSON.parse(localStorage.getItem('users')) || [];
 		localStorage.setItem('users', JSON.stringify([...existingUsers, newContact]));
@@ -58,17 +60,16 @@ function CreateContact() {
 					required
 				/>
 			</label>
-			{/* <label>
+			<label>
 				Is Favorite:
 				<input
 					className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-56 p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-					type="text"
-					placeholder="Yes/No"
+					type="checkbox"
 					checked={isFavorite}
 					onChange={(e) => setIsFavorite(e.target.checked)}
 					required
 				/>
-			</label> */}
+			</label>
 			<label>
 				CreatedAt:
 				<input

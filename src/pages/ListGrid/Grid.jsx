@@ -72,6 +72,15 @@ export default function ContactsListGrid() {
 				>
 					Grid
 				</Link>
+				<select
+					className="bg-blue-500 border text-white border-blue-500  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[150px] p-2.5 dark:bg-blue-700 dark:border-blue-600 dark:placeholder-blue-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+					name="createdAt"
+					id={users.id}
+				>
+					{users.map((user) => (
+						<option value={filteredUsers}>{user.createdAt}</option>
+					))}
+				</select>
 			</div>
 			<div className=" grid grid-cols-3 mb-9 w-[1000px] relative left-[200px] top-11">
 				{filteredUsers.map((user) => (
