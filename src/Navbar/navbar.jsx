@@ -1,9 +1,12 @@
 import React from 'react';
-import './styles.css';
+import { Link } from 'react-router-dom';
+
 export default function Navbar() {
 	return (
-		<div className="navbar">
-			<h1>Contacts</h1>
+		<div>
+			<Link to="/list" className="text-[50px] h-[40px] w-[900px] ">
+				Contact
+			</Link>
 		</div>
 	);
 }

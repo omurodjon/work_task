@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { defaultContacts } from '../../defaultCon';
 import Edit from './Edit';
-import './main.css';
 import { Link } from 'react-router-dom';
 import toast from 'react-hot-toast';
 
@@ -44,37 +43,60 @@ export default function ContactsListGrid() {
 	});
 
 	return (
-		<div>
-			<div className="header">
+		<div className="mt-10">
+			<div className="flex gap-3 ml-5">
 				<input
-					className="search"
 					type="text"
-					placeholder="Search users"
-					value={search}
+					id="search-navbar"
 					onChange={handleSearch}
+					className="block w-44 p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+					placeholder="Search..."
 				/>
-
-				<Link to="/add" className="add-contact">
+				<Link
+					to="/add"
+					className=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+				>
 					Add Contact
 				</Link>
+				<Link
+					to="/list"
+					type="button"
+					className=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+				>
+					Line
+				</Link>
+				<Link
+					to="/grid"
+					type="button"
+					className=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+				>
+					Grid
+				</Link>
 			</div>
-			<div className="grid">
+			<div className=" grid grid-cols-3 mb-9 w-[1000px] relative left-[200px] top-11">
 				{filteredUsers.map((user) => (
 					<div className="main" key={user.id}>
 						{editingUserId === user.id ? (
 							<Edit user={user} onSave={handleSave} />
 						) : (
-							<div className="user">
-								<p>User Name: {user.name}</p>
+							<div className="border w-[300px] p-5 rounded-lg bg-purple-600 text-white  mb-10">
+								<p>Name: {user.name}</p>
 								<p>Phone number: {user.phoneNumber}</p>
-								<p>Added: {user.createAt}</p>
-								<p>Favorite: {user.isFavorites}</p>
+								<p>CreatedAt: {user.createAt}</p>
+								<p>isFavorite: {user.isFavorites}</p>
 								<p>Note: {user.note}</p>
-								<div className="btns">
-									<button className="edit" onClick={() => handleEdit(user.id)}>
+								<div className="btns mt-3">
+									<button
+										className="focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-yellow-900"
+										onClick={() => handleEdit(user.id)}
+									>
 										Edit
 									</button>
-									<button className="delete" onClick={() => handleDelete(user.id)}>
+									<button
+										type="button"
+										onClick={() => handleDelete(user.id)}
+										class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
+									>
 										Delete
 									</button>
 								</div>

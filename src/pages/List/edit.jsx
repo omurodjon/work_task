@@ -15,7 +15,7 @@ export default function Edit({ user, onSave }) {
 	};
 
 	return (
-		<div className="border w-[300px] p-5 rounded-lg bg-purple-600 text-white  mb-10">
+		<div className="flex items-center justify-between pl-5 border w-[1100px] p-0.5 gap-10 rounded-lg bg-purple-600 text-white relative right-12">
 			<p>
 				User Name:
 				<input
