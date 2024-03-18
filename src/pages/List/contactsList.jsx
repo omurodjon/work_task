@@ -82,8 +82,8 @@ export default function ContactsListGrid() {
 							<div className="flex items-center justify-between pl-5 border w-[900px] p-0.5 gap-10 rounded-lg bg-purple-600 text-white  ">
 								<p>Name: {user.name}</p>
 								<p>Phone number: {user.phoneNumber}</p>
-								<p>CreatedAt: {user.createAt}</p>
-								<p>isFavorite: {user.isFavorites}</p>
+								<p>CreatedAt: {user.createdAt}</p>
+								<p>isFavorite: {user.isFavorite}</p>
 								<p>Note: {user.note}</p>
 								<div className="flex mt-3">
 									<button

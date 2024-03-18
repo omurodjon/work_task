@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 function CreateContact() {
 	const [name, setName] = useState('');
 	const [phoneNumber, setPhoneNumber] = useState('');
-	const [isFavorite, setIsFavorite] = useState(false);
+	const [isFavorite, setIsFavorite] = useState('');
 	const [note, setNote] = useState('');
 	const [createdAt, setCreatedAt] = useState('');
 
@@ -51,7 +51,7 @@ function CreateContact() {
 				Phone Number:
 				<input
 					className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-56 p-1 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-					type="tel"
+					type="number"
 					value={phoneNumber}
 					onChange={(e) => setPhoneNumber(e.target.value)}
 					placeholder="Phone Number"

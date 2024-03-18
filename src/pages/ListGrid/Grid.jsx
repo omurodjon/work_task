@@ -82,8 +82,8 @@ export default function ContactsListGrid() {
 							<div className="border w-[300px] p-5 rounded-lg bg-purple-600 text-white  mb-10">
 								<p>Name: {user.name}</p>
 								<p>Phone number: {user.phoneNumber}</p>
-								<p>CreatedAt: {user.createAt}</p>
-								<p>isFavorite: {user.isFavorites}</p>
+								<p>CreatedAt: {user.createdAt}</p>
+								<p>isFavorite: {user.isFavorite}</p>
 								<p>Note: {user.note}</p>
 								<div className="btns mt-3">
 									<button
